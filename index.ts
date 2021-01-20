@@ -1,10 +1,11 @@
 import http from "http";
 import express from "express";
 const app = express();
-const PORT = 5000;
+const PORT = 3001;
 
 app.get("/", (req, res) => {
-  res.send("Hello world 3");
+  // res.send("Hello world 3");
+  console.log("main page loaded");
 });
 
 app.listen(PORT, () => {
