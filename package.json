@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc -w",
-    "build": "tsc && cd client && yarn build"
+    "build": "tsc && cd client && yarn && yarn build"
   },
   "dependencies": {
     "@types/express": "^4.17.11",
