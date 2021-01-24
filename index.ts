@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 app.get("/", (req, res) => {
   // res.send("Hello world 3");
   console.log("main page loaded");
+  res.end("Hello World");
 });
 
 app.listen(PORT, () => {
