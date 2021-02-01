@@ -5,7 +5,7 @@ import path from "path";
 var io = require("socket.io")(http);
 
 const app = express();
-const PORT = 3001; //  ||  process.env.PORT
+const PORT = process.env.PORT; // 3001 ||  process.env.PORT
 
 app.use(express.static(path.resolve(__dirname, "../client/build")));
 
