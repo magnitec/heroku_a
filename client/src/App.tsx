@@ -1,24 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+
+const headerURL =
+  process.env.NODE_ENV === "production"
+    ? "/header"
+    : "http://localhost:3001/header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload 2.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button
+        onClick={async () => {
+          const response = await fetch(headerURL);
+          const text = await response.text();
+          console.log(text);
+        }}
+      >
+        click
+      </button>
     </div>
   );
 }
